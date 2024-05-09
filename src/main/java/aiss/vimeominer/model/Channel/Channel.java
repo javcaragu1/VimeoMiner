@@ -1,16 +1,19 @@
-package aiss.vimeominer.model;
+package aiss.vimeominer.model.Channel;
 
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
 import aiss.vimeominer.model.User.User;
+import aiss.vimeominer.model.Video;
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Channel {
-    @JsonProperty("uri")
+
+
+    @JsonTypeId()
     private String uri;
     @JsonProperty("name")
     private String name;
@@ -89,5 +92,8 @@ public class Channel {
                 ", videos=" + videos +
                 '}';
     }
+
+
+
 }
 

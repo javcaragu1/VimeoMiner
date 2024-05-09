@@ -4,38 +4,29 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/VimeoMiner-main.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="Creo que lo tengo!!!!!">
+      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/ChannelParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/Channel.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CaptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CaptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/ChannelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/ChannelServiceTest.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CommentController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/UserController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Caption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Caption.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/CaptionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/CaptionResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/Comment.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/CommentListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/CommentListResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Paging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Paging.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/Pictures.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/Pictures.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Video.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/VideoListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/VideoListResponse.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CaptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CaptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/UserService.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -43,9 +34,9 @@
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 8
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
   <component name="ProjectId" id="2gEh0gg6h48FvdgAprr8RhgWAJn" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -61,9 +52,10 @@
     "JUnit.VideoServiceTest.getVideosChannel.executor": "Run",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/VimeoMiner"
+    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/YoutubeMiner-main"
   }
 }]]></component>
   <component name="RunManager" selected="Application.VimeoMinerApplication">

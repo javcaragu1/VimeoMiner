@@ -1,11 +1,10 @@
 package aiss.vimeominer.controller;
 
-import aiss.vimeominer.model.Channel;
+import aiss.vimeominer.model.Channel.Channel;
+import aiss.vimeominer.model.ChannelParser;
 import aiss.vimeominer.model.Comment.Comment;
-import aiss.vimeominer.model.User.User;
 import aiss.vimeominer.model.Video;
 import aiss.vimeominer.service.ChannelService;
-import aiss.vimeominer.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
@@ -28,6 +27,7 @@ public class ChannelController {
 
     @Autowired
     ChannelService channelService;
+
 
     @Autowired
     public ChannelController(RestTemplateBuilder builder) {
@@ -57,9 +57,9 @@ public class ChannelController {
 
     //CREATE Y POST
 
-    //POST http://localhost:8082/YoutubeMiner/{key}/{id}[?maxVideos=10&maxComments=10]
+    //POST http://localhost:8082/vimeo/channels/{key}/{id}
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping
+    @PostMapping("/{id}")
     public Channel create(@PathVariable String id,
                               @RequestParam(defaultValue = "10") Integer maxVideos,
                               @RequestHeader(defaultValue = "10") Integer maxComments) {
@@ -91,7 +91,7 @@ public class ChannelController {
         return response.getBody();
     }
     @GetMapping("/{id}")
-    public Channel getChannel(@PathVariable String id,
+    public ChannelParser getChannel(@PathVariable String id,
                                   @RequestParam(defaultValue = "10") Integer maxVideos,
                                   @RequestHeader(defaultValue = "10") Integer maxComments) {
 
@@ -110,7 +110,7 @@ public class ChannelController {
                 video.setComments(comments.subList(0, maxComments));
             }
         }
-        return channel;
+        return ChannelParser.parseChannel(channel);
     }
 
 }
