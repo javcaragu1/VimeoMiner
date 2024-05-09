@@ -2,6 +2,7 @@ package aiss.vimeominer.service;
 
 
 import aiss.vimeominer.model.Channel;
+import aiss.vimeominer.model.Video;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.http.HttpEntity;
@@ -10,6 +11,8 @@ import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
+
+import java.util.List;
 
 @Service
 public class ChannelService {
@@ -37,7 +40,8 @@ public class ChannelService {
         );
 
         Channel channel = response.getBody();
-        Channel channelEdited = new Channel(channel.getUri().substring(channel.getUri().lastIndexOf("/") + 1), channel.getName(), channel.getDescription(), channel.getCreatedTime(), channel.getUser(), channel.getVideos());
+        List<Video> videos = videoService.getVideosChannel(channelId);
+        Channel channelEdited = new Channel(channel.getUri().substring(channel.getUri().lastIndexOf("/") + 1), channel.getName(), channel.getDescription(), channel.getCreatedTime(), videos);
 
         return channelEdited;
 

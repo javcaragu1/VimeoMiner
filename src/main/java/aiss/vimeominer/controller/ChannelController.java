@@ -2,7 +2,6 @@ package aiss.vimeominer.controller;
 
 import aiss.vimeominer.model.Channel;
 import aiss.vimeominer.model.Comment.Comment;
-import aiss.vimeominer.model.User.User;
 import aiss.vimeominer.model.Video;
 import aiss.vimeominer.service.ChannelService;
 import aiss.vimeominer.service.VideoService;
@@ -14,6 +13,7 @@ import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
+import java.util.Optional;
 
 @RestController
 @RequestMapping("/vimeo/channels")
@@ -34,6 +34,11 @@ public class ChannelController {
         this.restTemplate = builder.build();
     }
 
+
+
+
+
+/*
     @GetMapping("/{channel}")
     public ResponseEntity<Channel> getChannel(@PathVariable String channel) {
         String url = "https://api.vimeo.com/channels/" + channel;
@@ -53,6 +58,8 @@ public class ChannelController {
 
         return ResponseEntity.ok(response.getBody());
     }
+
+ */
 
 
 
