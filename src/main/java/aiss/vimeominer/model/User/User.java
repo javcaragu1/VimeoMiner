@@ -57,10 +57,17 @@ public class User {
         this.pictures = pictures;
     }
 
+    public User(String id, String name, String base_link, Pictures pictures) {
+        this.uri = id;
+        this.name = name;
+        this.base_link = base_link;
+        this.pictures = pictures;
+    }
+
     @Override
     public String toString() {
         return "User{" +
-                "uri='" + uri + '\'' +
+                "id='" + uri + '\'' +
                 ", name='" + name + '\'' +
                 ", base_link='" + base_link + '\'' +
                 ", pictures=" + pictures +

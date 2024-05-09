@@ -19,7 +19,7 @@ class ChannelServiceTest {
     @DisplayName("Test ChannelService")
 
     void getChannelDetails(){
-        Channel channel = service.getChannelDetails("1238");
+        Channel channel = service.getChannelDetails("1234");
         System.out.println(channel);
     }
 

@@ -36,7 +36,10 @@ public class ChannelService {
                 Channel.class
         );
 
-        return response.getBody();
+        Channel channel = response.getBody();
+        Channel channelEdited = new Channel(channel.getUri().substring(channel.getUri().lastIndexOf("/") + 1), channel.getName(), channel.getDescription(), channel.getCreatedTime(), channel.getUser(), channel.getVideos());
+
+        return channelEdited;
 
     }
 }

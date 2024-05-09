@@ -66,10 +66,19 @@ public class Video {
     public void setCaption(List<Caption> caption) { this.caption = caption; }
 
 
+    public Video(String id, String name, String description, String release_time, List<Comment> comments, List<Caption> caption) {
+        this.uri = id;
+        this.name = name;
+        this.description = description;
+        this.release_time = release_time;
+        this.comments = comments;
+        this.caption = caption;
+    }
+
     @Override
     public String toString() {
         return "Video{" +
-                "uri='" + uri + '\'' +
+                "id='" + uri + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", release_time='" + release_time + '\'' +

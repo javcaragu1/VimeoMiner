@@ -83,10 +83,19 @@ public class Channel {
     }
 
 
+    public Channel(String id, String name, String description, String created_time, User user, List<Video> videos) {
+        this.uri = id;
+        this.name = name;
+        this.description = description;
+        this.created_time = created_time;
+        this.user = user;
+        this.videos = videos;
+    }
+
     @Override
     public String toString() {
         return "Channel{" +
-                "uri='" + uri + '\'' +
+                "id='" + uri + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", created_time='" + created_time + '\'' +

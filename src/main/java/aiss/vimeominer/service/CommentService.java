@@ -12,6 +12,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
@@ -38,7 +39,13 @@ public class CommentService {
         );
         CommentListResponse commentListResponse = responseEntity.getBody();
         if (commentListResponse != null) {
-            return commentListResponse.getData();
+            List<Comment> comments = new ArrayList<>();
+            for (Integer i = 0; i < commentListResponse.getData().size(); i++) {
+                Comment comment = commentListResponse.getData().get(i);
+                Comment commentEdited = new Comment(comment.getUri().substring(comment.getUri().lastIndexOf("/") + 1), comment.getText(), comment.getCreatedOn(), comment.getUser());
+                comments.add(commentEdited);
+            }
+            return comments;
         }else {
             return Collections.emptyList();
         }

@@ -43,8 +43,9 @@ public class UserService {
                 User.class
         );
         User user = responseEntity.getBody();
+        User userEdited = new User(user.getUri().substring(user.getUri().lastIndexOf("/") + 1), user.getName(), user.getLink(), user.getPictures());
         if (user != null) {
-            return user;
+            return userEdited;
         } else {
             return null;
         }
@@ -61,8 +62,7 @@ public class UserService {
                 String id = comment.getUri().substring(comment.getUri().lastIndexOf("/") + 1);
                 if (id.equals(commentId)) {
                     user = comment.getUser();
-                } else {
-                    user = null;
+                    user = new User(user.getUri().substring(user.getUri().lastIndexOf("/") + 1), user.getName(), user.getLink(), user.getPictures());
                 }
 
             }

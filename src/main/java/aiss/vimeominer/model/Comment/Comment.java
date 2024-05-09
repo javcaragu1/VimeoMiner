@@ -55,10 +55,17 @@ public class Comment {
     @JsonProperty("user")
     public void setUser(User user) { this.user = user; }
 
+    public Comment(String id, String text, String created_on, User user) {
+        this.uri = id;
+        this.text = text;
+        this.created_on = created_on;
+        this.user = user;
+    }
+
     @Override
     public String toString() {
         return "Comment{" +
-                "uri='" + uri + '\'' +
+                "id='" + uri + '\'' +
                 ", text='" + text + '\'' +
                 ", created_on='" + created_on + '\'' +
                 ", user=" + user +
