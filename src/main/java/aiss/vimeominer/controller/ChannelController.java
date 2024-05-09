@@ -59,7 +59,7 @@ public class ChannelController {
 
     //POST http://localhost:8082/YoutubeMiner/{key}/{id}[?maxVideos=10&maxComments=10]
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/{id}")
+    @PostMapping
     public Channel create(@PathVariable String id,
                               @RequestParam(defaultValue = "10") Integer maxVideos,
                               @RequestHeader(defaultValue = "10") Integer maxComments) {
@@ -80,7 +80,15 @@ public class ChannelController {
         }
 
         String uri = "http://localhost:8080/VideoMiner/channels";
-        return restTemplate.postForObject(uri, channel, Channel.class);
+        HttpEntity<Channel> request = new HttpEntity<>(channel);
+        ResponseEntity<Channel> response = restTemplate.exchange(
+                uri,
+                HttpMethod.POST,
+                request,
+                Channel.class
+        );
+
+        return response.getBody();
     }
     @GetMapping("/{id}")
     public Channel getChannel(@PathVariable String id,
