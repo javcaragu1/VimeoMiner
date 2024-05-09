@@ -23,8 +23,8 @@ public class ChannelController {
     private String vimeoApiToken;
     private final RestTemplate restTemplate;
 
-    @Autowired
-    private VideoService videoService;
+    // @Autowired
+    // private VideoService videoService;
 
     @Autowired
     ChannelService channelService;
@@ -34,7 +34,7 @@ public class ChannelController {
         this.restTemplate = builder.build();
     }
 
-    @GetMapping("/{channel}")
+    /*@GetMapping("/{channel}")
     public ResponseEntity<Channel> getChannel(@PathVariable String channel) {
         String url = "https://api.vimeo.com/channels/" + channel;
         HttpHeaders headers = new HttpHeaders();
@@ -52,21 +52,19 @@ public class ChannelController {
         response.getBody().setVideos(videoService.getVideosChannel(userId));
 
         return ResponseEntity.ok(response.getBody());
-    }
-
+    }*/
 
 
     //CREATE Y POST
 
     //POST http://localhost:8082/YoutubeMiner/{key}/{id}[?maxVideos=10&maxComments=10]
     @ResponseStatus(HttpStatus.CREATED)
-    @PostMapping("/{key}/{id}")
-    public Channel create(@PathVariable String key,
-                              @PathVariable String id,
+    @PostMapping("/{id}")
+    public Channel create(@PathVariable String id,
                               @RequestParam(defaultValue = "10") Integer maxVideos,
                               @RequestHeader(defaultValue = "10") Integer maxComments) {
 
-        Channel channel = channelService.getChannelDetails(id);
+        Channel channel = channelService.getChannelDetails(id, "aa9d3c5e651d5df6c3545ae8ecb45329");
         // Filter videos
         List<Video> videos = channel.getVideos();
         if (maxVideos >= 0 && videos.size() > maxVideos) {
@@ -84,13 +82,12 @@ public class ChannelController {
         String uri = "http://localhost:8080/VideoMiner/channels";
         return restTemplate.postForObject(uri, channel, Channel.class);
     }
-    @GetMapping("/{key}/{id}")
-    public Channel getChannel(@PathVariable String key,
-                                  @PathVariable String id,
+    @GetMapping("/{id}")
+    public Channel getChannel(@PathVariable String id,
                                   @RequestParam(defaultValue = "10") Integer maxVideos,
                                   @RequestHeader(defaultValue = "10") Integer maxComments) {
 
-        Channel channel = channelService.getChannelDetails(id);
+        Channel channel = channelService.getChannelDetails(id, "aa9d3c5e651d5df6c3545ae8ecb45329");
 
         // Filter videos
         List<Video> videos = channel.getVideos();
