@@ -18,8 +18,6 @@ public class Channel {
     private String description;
     @JsonProperty("created_time")
     private String created_time;
-    @JsonProperty("user")
-    private User user;
     @JsonProperty("videos")
     private List<Video> videos;
 
@@ -63,16 +61,6 @@ public class Channel {
         this.created_time = created_time;
     }
 
-    @JsonProperty("user")
-    public User getUser() {
-        return user;
-    }
-
-    @JsonProperty("user")
-    public void setUser(User user) {
-        this.user = user;
-    }
-
     @JsonProperty("videos")
     public List<Video> getVideos() {
         return videos;
@@ -83,13 +71,12 @@ public class Channel {
     }
 
 
-    public Channel(String id, String name, String description, String created_time, User user, List<Video> videos) {
+    public Channel(String id, String name, String description, String created_time, List<Video> videos) {
         this.uri = id;
         this.name = name;
         this.description = description;
         this.created_time = created_time;
-        this.user = user;
-        this.videos = videos;
+        this.videos = videos; // Camniahghj
     }
 
     @Override
@@ -99,7 +86,6 @@ public class Channel {
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", created_time='" + created_time + '\'' +
-                ", user=" + user +
                 ", videos=" + videos +
                 '}';
     }

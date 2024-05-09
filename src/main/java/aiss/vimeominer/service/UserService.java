@@ -20,9 +20,10 @@ import java.util.List;
 
 @Service
 public class UserService {
-
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
-    private CommentService commentService;
+    CommentService commentService;
+    @SuppressWarnings("SpringJavaInjectionPointsAutowiringInspection")
     @Autowired
     RestTemplate restTemplate;
 

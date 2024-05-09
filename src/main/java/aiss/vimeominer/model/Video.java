@@ -3,6 +3,7 @@ package aiss.vimeominer.model;
 import aiss.vimeominer.model.Comment.Comment;
 import com.fasterxml.jackson.annotation.*;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -20,6 +21,11 @@ public class Video {
     private List<Comment> comments;
 
     private List<Caption> caption;
+
+    public Video() {
+        comments = new ArrayList<>();
+        caption = new ArrayList<>();
+    }
 
     @JsonProperty("uri")
     public String getUri() { return uri; }
