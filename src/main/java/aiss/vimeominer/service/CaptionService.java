@@ -8,10 +8,13 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
 
+@Service
 public class CaptionService {
 
     @Autowired
@@ -24,14 +27,14 @@ public class CaptionService {
         String url = "https://api.vimeo.com/videos/" + videoId + "/texttracks";
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "bearer " + vimeoApiToken);
-        ResponseEntity response = restTemplate.exchange(
+        ResponseEntity<CaptionResponse> response = restTemplate.exchange(
                 url,
                 HttpMethod.GET,
                 new HttpEntity<>(headers),
-                Caption.class
+                CaptionResponse.class
         );
 
-        CaptionResponse captionResponse = (CaptionResponse) response.getBody();
+        CaptionResponse captionResponse = response.getBody();
         List<Caption> caption = captionResponse.getData();
 
         return caption;

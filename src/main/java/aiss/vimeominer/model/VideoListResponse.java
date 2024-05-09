@@ -1,9 +1,12 @@
 package aiss.vimeominer.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class VideoListResponse {
     @JsonProperty("total")
     private int total;
@@ -64,5 +67,17 @@ public class VideoListResponse {
     @JsonProperty("data")
     public void setData(List<Video> data) {
         this.data = data;
+    }
+
+
+    @Override
+    public String toString() {
+        return "VideoListResponse{" +
+                "total=" + total +
+                ", page=" + page +
+                ", perPage=" + perPage +
+                ", paging=" + paging +
+                ", data=" + data +
+                '}';
     }
 }

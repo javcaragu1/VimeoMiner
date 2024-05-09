@@ -5,15 +5,20 @@ import aiss.vimeominer.model.Video;
 import aiss.vimeominer.model.VideoListResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.ArrayList;
 import java.util.List;
 
+
+@Service
 public class VideoService {
 
 
@@ -31,8 +36,9 @@ public class VideoService {
 
 
     public List<Video> getVideosChannel (String channelId) {
-        String url = "https://api.vimeo.com/users/" + channelId + "/videos";
+        String url = "https://api.vimeo.com/channels/" + channelId + "/videos";
         HttpHeaders headers = new HttpHeaders();
+        headers.set("Authorization", "Bearer " + vimeoApiToken);
         HttpEntity<String> entity = new HttpEntity<>(headers);
 
         List<Video> allVideos = new ArrayList<>();
@@ -52,7 +58,7 @@ public class VideoService {
             List<Video> videos = videoListResponse.getData();
 
             for (Integer i = 0; i < videos.size(); i++) {
-                String videoId = videos.get(i).getUri().substring(videos.get(i).getUri().lastIndexOf("/" + 1));
+                String videoId = videos.get(i).getUri().substring(videos.get(i).getUri().lastIndexOf("/"));
                 List<Comment> comments = commentService.getVideoComments(videoId);
                 videos.get(i).setComments(comments);
                 videos.get(i).setCaption(captionService.getVideoCaption(videoId));

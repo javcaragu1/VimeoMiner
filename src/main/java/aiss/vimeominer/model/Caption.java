@@ -1,8 +1,10 @@
 package aiss.vimeominer.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Caption {
     @JsonProperty("display_language")
@@ -40,4 +42,12 @@ public class Caption {
         this.name = name;
     }
 
+    @Override
+    public String toString() {
+        return "Caption{" +
+                "displayLanguage='" + displayLanguage + '\'' +
+                ", id=" + id +
+                ", name='" + name + '\'' +
+                '}';
+    }
 }

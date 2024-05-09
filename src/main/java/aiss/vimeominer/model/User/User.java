@@ -1,8 +1,11 @@
 package aiss.vimeominer.model.User;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class User {
     @JsonProperty("uri")
@@ -52,5 +55,15 @@ public class User {
     @JsonProperty("pictures")
     public void setPictures(Pictures pictures) {
         this.pictures = pictures;
+    }
+
+    @Override
+    public String toString() {
+        return "User{" +
+                "uri='" + uri + '\'' +
+                ", name='" + name + '\'' +
+                ", base_link='" + base_link + '\'' +
+                ", pictures=" + pictures +
+                '}';
     }
 }

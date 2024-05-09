@@ -1,19 +1,22 @@
 package aiss.vimeominer.controller;
 
-
 import aiss.vimeominer.model.Channel;
 import aiss.vimeominer.model.Comment.Comment;
-import aiss.vimeominer.model.Video;
-import aiss.vimeominer.model.VideoListResponse;
+import aiss.vimeominer.model.User.User;
 import aiss.vimeominer.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.*;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.http.HttpEntity;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpMethod;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -31,57 +34,23 @@ public class ChannelController {
         this.restTemplate = builder.build();
     }
 
-
-
-    @GetMapping("/videos/{channel_id}")
-    public ResponseEntity<List<Video>> getVideos(@PathVariable String channel_id) {
+    @GetMapping("/{channel}")
+    public ResponseEntity<Channel> getChannel(@PathVariable String channel) {
+        String url = "https://api.vimeo.com/channels/" + channel;
         HttpHeaders headers = new HttpHeaders();
         headers.set("Authorization", "Bearer " + vimeoApiToken);
-        HttpEntity<String> entity = new HttpEntity<>(headers);
 
-        String url = "https://api.vimeo.com/users/" + channel_id + "/videos";
+        ResponseEntity<Channel> response = restTemplate.exchange(
+                url,
+                HttpMethod.GET,
+                new HttpEntity<>(headers),
+                Channel.class
+        );
+        String userId = response.getBody().getUser().getUri();
+        userId = userId.substring(userId.lastIndexOf("/") + 1);
 
-        List<Video> allVideos = new ArrayList<>();
-        int currentPage = 1;
-        boolean hasMorePages = true;
+        response.getBody().setVideos(videoService.getVideosChannel(userId));
 
-        while (hasMorePages) {
-            ResponseEntity<VideoListResponse> responseEntity = restTemplate.exchange(
-                    url + "?page=" + currentPage,
-                    HttpMethod.GET,
-                    entity,
-                    VideoListResponse.class
-            );
-
-            VideoListResponse videoListResponse = responseEntity.getBody();
-            List<Video> videos = videoListResponse.getData();
-
-            for (Video video : videos) {
-                String id = video.getUri().substring(video.getUri().lastIndexOf("/") + 1);
-                List<Comment> comments = commentService.getVideoComments(id);
-                video.setComments(comments);
-                video.setCaption(captionService.getVideoCaption(id));
-            }
-
-            allVideos.addAll(videos);
-
-            if (videoListResponse.getPaging().getNext() == null) {
-                hasMorePages = false;
-            } else {
-                currentPage++;
-            }
-        }
-
-        return ResponseEntity.ok(allVideos);
-    }
-
-    @ExceptionHandler(VideoNotFoundException.class)
-    public ResponseEntity<String> handleVideoNotFoundException(VideoNotFoundException ex) {
-        return ResponseEntity.status(HttpStatus.NOT_FOUND).body(ex.getMessage());
-    }
-
-    @ExceptionHandler(Exception.class)
-    public ResponseEntity<String> handleException(Exception ex) {
-        return ResponseEntity.status(HttpStatus.INTERNAL_SERVER_ERROR).body("Error 404 - : " + ex.getMessage());
+        return ResponseEntity.ok(response.getBody());
     }
 }

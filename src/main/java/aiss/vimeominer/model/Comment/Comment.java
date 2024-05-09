@@ -1,10 +1,13 @@
 package aiss.vimeominer.model.Comment;
 
 import aiss.vimeominer.model.User.User;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Comment {
     @JsonProperty("uri")
@@ -52,4 +55,13 @@ public class Comment {
     @JsonProperty("user")
     public void setUser(User user) { this.user = user; }
 
+    @Override
+    public String toString() {
+        return "Comment{" +
+                "uri='" + uri + '\'' +
+                ", text='" + text + '\'' +
+                ", created_on='" + created_on + '\'' +
+                ", user=" + user +
+                '}';
+    }
 }

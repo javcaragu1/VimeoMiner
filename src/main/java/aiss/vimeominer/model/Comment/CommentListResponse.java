@@ -2,10 +2,13 @@ package aiss.vimeominer.model.Comment;
 
 import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.Paging;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
 import java.util.List;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class CommentListResponse {
     @JsonProperty("total")
     private int total;
@@ -66,5 +69,17 @@ public class CommentListResponse {
     @JsonProperty("data")
     public void setData(List<Comment> data) {
         this.data = data;
+    }
+
+
+    @Override
+    public String toString() {
+        return "CommentListResponse{" +
+                "total=" + total +
+                ", page=" + page +
+                ", perPage=" + perPage +
+                ", paging=" + paging +
+                ", data=" + data +
+                '}';
     }
 }

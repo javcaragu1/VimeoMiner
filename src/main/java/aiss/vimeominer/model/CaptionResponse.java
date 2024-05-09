@@ -6,6 +6,7 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class CaptionResponse {
     @JsonProperty("total")
@@ -81,4 +82,16 @@ public class CaptionResponse {
         this.additionalProperties.put(name, value);
     }
 
+
+    @Override
+    public String toString() {
+        return "CaptionResponse{" +
+                "total=" + total +
+                ", page=" + page +
+                ", perPage=" + perPage +
+                ", paging=" + paging +
+                ", data=" + data +
+                ", additionalProperties=" + additionalProperties +
+                '}';
+    }
 }

@@ -5,13 +5,9 @@ import java.util.List;
 import java.util.Map;
 
 import aiss.vimeominer.model.User.User;
-import com.fasterxml.jackson.annotation.JsonAnyGetter;
-import com.fasterxml.jackson.annotation.JsonAnySetter;
-import com.fasterxml.jackson.annotation.JsonIgnore;
-import com.fasterxml.jackson.annotation.JsonInclude;
-import com.fasterxml.jackson.annotation.JsonProperty;
-import com.fasterxml.jackson.annotation.JsonPropertyOrder;
+import com.fasterxml.jackson.annotation.*;
 
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Channel {
     @JsonProperty("uri")
@@ -84,6 +80,19 @@ public class Channel {
     @JsonProperty("videos")
     public void setVideos(List<Video> videos) {
         this.videos = videos;
+    }
+
+
+    @Override
+    public String toString() {
+        return "Channel{" +
+                "uri='" + uri + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", created_time='" + created_time + '\'' +
+                ", user=" + user +
+                ", videos=" + videos +
+                '}';
     }
 }
 

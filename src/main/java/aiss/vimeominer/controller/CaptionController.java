@@ -49,6 +49,8 @@ public class CaptionController {
         List<Caption> caption = new ArrayList<>();
         if (captionResponse.getData().size() > 0) {
             caption = captionResponse.getData();
+        } else {
+            return null;
         }
 
         return ResponseEntity.ok(caption);

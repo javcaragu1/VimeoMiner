@@ -9,6 +9,8 @@ import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 import aiss.vimeominer.service.CommentService;
 
@@ -16,6 +18,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+@Service
 public class UserService {
 
     @Autowired
@@ -48,8 +51,8 @@ public class UserService {
 
     }
 
-    public User getUserComment(String commentId) {
-        String videoId = String.valueOf(97);
+    public User getUserComment(String commentId, String videoId) {
+        //String videoId = String.valueOf(97);
         List<Comment> response = commentService.getVideoComments(videoId);
         User user = null;
         if (response != null) {

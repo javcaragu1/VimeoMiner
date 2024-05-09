@@ -5,6 +5,8 @@ import com.fasterxml.jackson.annotation.*;
 
 import java.util.List;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class Video {
     @JsonProperty("uri")
@@ -62,4 +64,17 @@ public class Video {
     public List<Caption> getCaption() { return caption; }
 
     public void setCaption(List<Caption> caption) { this.caption = caption; }
+
+
+    @Override
+    public String toString() {
+        return "Video{" +
+                "uri='" + uri + '\'' +
+                ", name='" + name + '\'' +
+                ", description='" + description + '\'' +
+                ", release_time='" + release_time + '\'' +
+                ", comments=" + comments +
+                ", caption=" + caption +
+                '}';
+    }
 }

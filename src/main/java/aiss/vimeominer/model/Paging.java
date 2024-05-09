@@ -1,7 +1,10 @@
 package aiss.vimeominer.model;
 
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 
+
+@JsonIgnoreProperties(ignoreUnknown = true)
 public class Paging {
     @JsonProperty("next")
     private String next;
@@ -53,5 +56,15 @@ public class Paging {
     @JsonProperty("last")
     public void setLast(String last) {
         this.last = last;
+    }
+
+    @Override
+    public String toString() {
+        return "Paging{" +
+                "next='" + next + '\'' +
+                ", previous='" + previous + '\'' +
+                ", first='" + first + '\'' +
+                ", last='" + last + '\'' +
+                '}';
     }
 }
