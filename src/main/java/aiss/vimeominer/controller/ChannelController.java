@@ -3,18 +3,14 @@ package aiss.vimeominer.controller;
 import aiss.vimeominer.model.Channel;
 import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.User.User;
+import aiss.vimeominer.model.Video;
+import aiss.vimeominer.service.ChannelService;
 import aiss.vimeominer.service.VideoService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.http.HttpEntity;
-import org.springframework.http.HttpHeaders;
-import org.springframework.http.HttpMethod;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.http.*;
+import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
 import java.util.List;
@@ -29,6 +25,10 @@ public class ChannelController {
 
     @Autowired
     private VideoService videoService;
+
+    @Autowired
+    ChannelService channelService;
+
     @Autowired
     public ChannelController(RestTemplateBuilder builder) {
         this.restTemplate = builder.build();
@@ -53,4 +53,59 @@ public class ChannelController {
 
         return ResponseEntity.ok(response.getBody());
     }
+
+
+
+    //CREATE Y POST
+
+    //POST http://localhost:8082/YoutubeMiner/{key}/{id}[?maxVideos=10&maxComments=10]
+    @ResponseStatus(HttpStatus.CREATED)
+    @PostMapping("/{key}/{id}")
+    public Channel create(@PathVariable String key,
+                              @PathVariable String id,
+                              @RequestParam(defaultValue = "10") Integer maxVideos,
+                              @RequestHeader(defaultValue = "10") Integer maxComments) {
+
+        Channel channel = channelService.getChannelDetails(id);
+        // Filter videos
+        List<Video> videos = channel.getVideos();
+        if (maxVideos >= 0 && videos.size() > maxVideos) {
+            channel.setVideos(videos.subList(0, maxVideos));
+        }
+
+        // Filter comments for each video
+        for (Video video : channel.getVideos()) {
+            List<Comment> comments = video.getComments();
+            if (maxComments >= 0 && comments.size() > maxComments) {
+                video.setComments(comments.subList(0, maxComments));
+            }
+        }
+
+        String uri = "http://localhost:8080/VideoMiner/channels";
+        return restTemplate.postForObject(uri, channel, Channel.class);
+    }
+    @GetMapping("/{key}/{id}")
+    public Channel getChannel(@PathVariable String key,
+                                  @PathVariable String id,
+                                  @RequestParam(defaultValue = "10") Integer maxVideos,
+                                  @RequestHeader(defaultValue = "10") Integer maxComments) {
+
+        Channel channel = channelService.getChannelDetails(id);
+
+        // Filter videos
+        List<Video> videos = channel.getVideos();
+        if (maxVideos >= 0 && videos.size() > maxVideos) {
+            channel.setVideos(videos.subList(0, maxVideos));
+        }
+
+        // Filter comments for each video
+        for (Video video : channel.getVideos()) {
+            List<Comment> comments = video.getComments();
+            if (maxComments >= 0 && comments.size() > maxComments) {
+                video.setComments(comments.subList(0, maxComments));
+            }
+        }
+        return channel;
+    }
+
 }
