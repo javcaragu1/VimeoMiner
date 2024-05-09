@@ -1,0 +1,175 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/VimeoMiner-main.iml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CaptionController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CaptionController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CommentController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/CommentController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/UserController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/UserController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Caption.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Caption.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/CaptionResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/CaptionResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/Comment.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/Comment.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/CommentListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Comment/CommentListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Paging.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Paging.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/Pictures.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/Pictures.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Video.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Video.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/VideoListResponse.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/VideoListResponse.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CaptionService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CaptionService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/UserService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/UserService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 8
+}]]></component>
+  <component name="ProjectId" id="2gEh0gg6h48FvdgAprr8RhgWAJn" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Application.VimeoMinerApplication.executor": "Run",
+    "JUnit.CaptionServiceTest.getVideoCaption.executor": "Run",
+    "JUnit.ChannelServiceTest.getChannelDetails.executor": "Run",
+    "JUnit.CommentServiceTest.getVideoComments.executor": "Run",
+    "JUnit.UserServiceTest.getUserDetails.executor": "Run",
+    "JUnit.VideoServiceTest.getVideosChannel.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "master",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/VimeoMiner"
+  }
+}]]></component>
+  <component name="RunManager" selected="Application.VimeoMinerApplication">
+    <configuration name="VimeoMinerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="aiss.vimeominer.VimeoMinerApplication" />
+      <module name="VimeoMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.vimeominer.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="ChannelServiceTest.getChannelDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VimeoMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.VimeoMiner.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.VimeoMiner.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.VimeoMiner.service.ChannelServiceTest" />
+      <option name="METHOD_NAME" value="getChannelDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="CommentServiceTest.getVideoComments" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VimeoMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.VimeoMiner.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.VimeoMiner.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.VimeoMiner.service.CommentServiceTest" />
+      <option name="METHOD_NAME" value="getVideoComments" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="UserServiceTest.getUserDetails" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VimeoMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.VimeoMiner.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.VimeoMiner.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.VimeoMiner.service.UserServiceTest" />
+      <option name="METHOD_NAME" value="getUserDetails" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="VideoServiceTest.getVideosChannel" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="VimeoMiner" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="aiss.VimeoMiner.service.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="aiss.VimeoMiner.service" />
+      <option name="MAIN_CLASS_NAME" value="aiss.VimeoMiner.service.VideoServiceTest" />
+      <option name="METHOD_NAME" value="getVideosChannel" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.VimeoMinerApplication" />
+        <item itemvalue="JUnit.VideoServiceTest.getVideosChannel" />
+        <item itemvalue="JUnit.UserServiceTest.getUserDetails" />
+        <item itemvalue="JUnit.CommentServiceTest.getVideoComments" />
+        <item itemvalue="JUnit.ChannelServiceTest.getChannelDetails" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="jdk-22-openjdk-22-3183f394aec4-bad0321e" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="" />
+      <created>1715268422480</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1715268422480</updated>
+    </task>
+    <servers />
+  </component>
+</project>
