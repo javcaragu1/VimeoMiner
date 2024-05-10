@@ -1,5 +1,6 @@
-package aiss.vimeominer.model;
+package aiss.vimeominer.model.Video;
 
+import aiss.vimeominer.model.Caption;
 import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.Comment.CommentParser;
 import com.fasterxml.jackson.annotation.*;
@@ -13,6 +14,9 @@ import java.util.List;
 public class Video {
     @JsonProperty("uri")
     private String uri;
+
+    @JsonProperty("id")
+    private String id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("description")
@@ -33,6 +37,11 @@ public class Video {
 
     @JsonProperty("uri")
     public void setUri(String uri) { this.uri = uri; }
+    @JsonProperty("id")
+    public String getId() { return id; }
+
+    @JsonProperty("id")
+    public void setId(String id) { this.id = id; }
 
     @JsonProperty("name")
     public String getName() {
@@ -74,7 +83,7 @@ public class Video {
 
 
     public Video(String id, String name, String description, String release_time, List<CommentParser> comments, List<Caption> caption) {
-        this.uri = id;
+        this.id = id;
         this.name = name;
         this.description = description;
         this.release_time = release_time;
@@ -85,7 +94,7 @@ public class Video {
     @Override
     public String toString() {
         return "Video{" +
-                "id='" + uri + '\'' +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", description='" + description + '\'' +
                 ", release_time='" + release_time + '\'' +

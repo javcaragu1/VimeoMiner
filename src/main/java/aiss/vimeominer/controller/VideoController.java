@@ -3,16 +3,14 @@ package aiss.vimeominer.controller;
 import aiss.vimeominer.exception.VideoNotFoundException;
 import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.Comment.CommentParser;
-import aiss.vimeominer.model.Video;
-import aiss.vimeominer.model.VideoListResponse;
+import aiss.vimeominer.model.Video.Video;
+import aiss.vimeominer.model.Video.VideoListResponse;
 import aiss.vimeominer.service.CaptionService;
 import aiss.vimeominer.service.CommentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.web.client.RestTemplateBuilder;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.*;
-import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 

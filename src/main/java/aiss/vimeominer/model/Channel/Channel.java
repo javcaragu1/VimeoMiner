@@ -1,11 +1,8 @@
 package aiss.vimeominer.model.Channel;
 
-import java.util.LinkedHashMap;
 import java.util.List;
-import java.util.Map;
 
-import aiss.vimeominer.model.User.User;
-import aiss.vimeominer.model.Video;
+import aiss.vimeominer.model.Video.Video;
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

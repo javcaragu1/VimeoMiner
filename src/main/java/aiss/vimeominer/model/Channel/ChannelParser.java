@@ -3,6 +3,7 @@ package aiss.vimeominer.model;
 import java.util.List;
 
 import aiss.vimeominer.model.Channel.Channel;
+import aiss.vimeominer.model.Video.Video;
 import com.fasterxml.jackson.annotation.*;
 
 @JsonIgnoreProperties(ignoreUnknown = true)

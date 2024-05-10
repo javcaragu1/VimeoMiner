@@ -1,5 +1,7 @@
-package aiss.vimeominer.model;
+package aiss.vimeominer.model.Video;
 
+import aiss.vimeominer.model.Paging;
+import aiss.vimeominer.model.Video.Video;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonProperty;
 

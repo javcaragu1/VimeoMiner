@@ -3,6 +3,7 @@ package aiss.vimeominer.model.User;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
+import com.fasterxml.jackson.annotation.JsonTypeId;
 
 
 @JsonIgnoreProperties(ignoreUnknown = true)
@@ -10,6 +11,9 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 public class User {
     @JsonProperty("uri")
     private String uri;
+
+    @JsonProperty("id")
+    private String id;
     @JsonProperty("name")
     private String name;
     @JsonProperty("base_link")
@@ -25,6 +29,15 @@ public class User {
     @JsonProperty("uri")
     public void setUri(String uri) {
         this.uri = uri;
+    }
+    @JsonProperty("id")
+    public String getId() {
+        return id;
+    }
+
+    @JsonProperty("id")
+    public void setId(String id) {
+        this.id = id;
     }
 
     @JsonProperty("name")
@@ -57,8 +70,8 @@ public class User {
         this.pictures = pictures;
     }
 
-    public User(String id, String name, String base_link, Pictures pictures) {
-        this.uri = id;
+    public User(String uri, String name, String base_link, Pictures pictures) {
+        this.id = uri.substring(uri.lastIndexOf("/") + 1);
         this.name = name;
         this.base_link = base_link;
         this.pictures = pictures;
@@ -67,7 +80,7 @@ public class User {
     @Override
     public String toString() {
         return "User{" +
-                "id='" + uri + '\'' +
+                "id='" + id + '\'' +
                 ", name='" + name + '\'' +
                 ", base_link='" + base_link + '\'' +
                 ", pictures=" + pictures +

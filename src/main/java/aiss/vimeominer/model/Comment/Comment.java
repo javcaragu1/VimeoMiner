@@ -59,7 +59,8 @@ public class Comment {
         this.uri = id;
         this.text = text;
         this.created_on = created_on;
-        this.user = user;
+        User newUser = new User(user.getId(), user.getName(), user.getLink(), user.getPictures());
+        this.user = newUser;
     }
 
     @Override

@@ -4,7 +4,33 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="Comments parseado" />
+    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="Comments parseado">
+      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/User/UserPaser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/VideoController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/VideoController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/Channel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/ChannelParser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/ChannelParser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Comment/Comment.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Comment/Comment.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/User/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/User/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Video.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Video/Video.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/VideoListResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Video/VideoListResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/CommentService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/CommentService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/VideoService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/VideoService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/VideoServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/VideoServiceTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/VideoController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel/Channel.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel/Channel.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/ChannelParser.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/ChannelParser.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/User/User.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Video.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/VideoListResponse.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/CommentService.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/VideoService.class" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -31,22 +57,24 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Application.VimeoMinerApplication.executor": "Run",
-    "JUnit.CaptionServiceTest.getVideoCaption.executor": "Run",
-    "JUnit.ChannelServiceTest.getChannelDetails.executor": "Run",
-    "JUnit.CommentServiceTest.getVideoComments.executor": "Run",
-    "JUnit.UserServiceTest.getUserDetails.executor": "Run",
-    "JUnit.VideoServiceTest.getVideosChannel.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/YoutubeMiner-main",
-    "settings.editor.selected.configurable": "actions.on.save"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.VimeoMinerApplication.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CaptionServiceTest.getVideoCaption.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.ChannelServiceTest.getChannelDetails.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.CommentServiceTest.getVideoComments.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.UserServiceTest.getUserDetails.executor&quot;: &quot;Run&quot;,
+    &quot;JUnit.VideoServiceTest.getVideosChannel.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;master&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/javic/Desktop/Uni/AISS/Proyecto/YoutubeMiner-main&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;inlay.hints&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected="Application.VimeoMinerApplication">
     <configuration name="VimeoMinerApplication" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="aiss.vimeominer.VimeoMinerApplication" />
@@ -151,6 +179,27 @@
       <option name="presentableId" value="Default" />
       <updated>1715268422480</updated>
     </task>
+    <task id="LOCAL-00001" summary="Comments parseado">
+      <option name="closed" value="true" />
+      <created>1715336784293</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1715336784293</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Comments parseado">
+      <option name="closed" value="true" />
+      <created>1715336793998</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1715336793998</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="Comments parseado" />
+    <option name="LAST_COMMIT_MESSAGE" value="Comments parseado" />
   </component>
 </project>

@@ -2,9 +2,8 @@ package aiss.vimeominer.controller;
 
 import aiss.vimeominer.model.Channel.Channel;
 import aiss.vimeominer.model.ChannelParser;
-import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.Comment.CommentParser;
-import aiss.vimeominer.model.Video;
+import aiss.vimeominer.model.Video.Video;
 import aiss.vimeominer.service.ChannelService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -13,7 +12,6 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
-import java.util.ArrayList;
 import java.util.List;
 
 @RestController

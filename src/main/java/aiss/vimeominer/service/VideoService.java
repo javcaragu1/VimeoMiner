@@ -3,16 +3,14 @@ package aiss.vimeominer.service;
 import aiss.vimeominer.model.Caption;
 import aiss.vimeominer.model.Comment.Comment;
 import aiss.vimeominer.model.Comment.CommentParser;
-import aiss.vimeominer.model.Video;
-import aiss.vimeominer.model.VideoListResponse;
+import aiss.vimeominer.model.Video.Video;
+import aiss.vimeominer.model.Video.VideoListResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
-import org.springframework.context.annotation.Bean;
 import org.springframework.http.HttpEntity;
 import org.springframework.http.HttpHeaders;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.ResponseEntity;
-import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
