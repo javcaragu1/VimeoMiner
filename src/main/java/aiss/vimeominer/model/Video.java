@@ -1,6 +1,7 @@
 package aiss.vimeominer.model;
 
 import aiss.vimeominer.model.Comment.Comment;
+import aiss.vimeominer.model.Comment.CommentParser;
 import com.fasterxml.jackson.annotation.*;
 
 import java.util.ArrayList;
@@ -18,7 +19,7 @@ public class Video {
     private String description;
     @JsonProperty("release_time")
     private String release_time;
-    private List<Comment> comments;
+    private List<CommentParser> comments;
 
     private List<Caption> caption;
 
@@ -59,11 +60,11 @@ public class Video {
     @JsonProperty("release_time")
     public void setReleaseTime(String release_time) { this.release_time = release_time; }
 
-    public List<Comment> getComments() {
+    public List<CommentParser> getComments() {
         return comments;
     }
 
-    public void setComments(List<Comment> comments) {
+    public void setComments(List<CommentParser> comments) {
         this.comments = comments;
     }
 
@@ -72,7 +73,7 @@ public class Video {
     public void setCaption(List<Caption> caption) { this.caption = caption; }
 
 
-    public Video(String id, String name, String description, String release_time, List<Comment> comments, List<Caption> caption) {
+    public Video(String id, String name, String description, String release_time, List<CommentParser> comments, List<Caption> caption) {
         this.uri = id;
         this.name = name;
         this.description = description;

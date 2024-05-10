@@ -2,6 +2,7 @@ package aiss.vimeominer.controller;
 
 import aiss.vimeominer.exception.VideoNotFoundException;
 import aiss.vimeominer.model.Comment.Comment;
+import aiss.vimeominer.model.Comment.CommentParser;
 import aiss.vimeominer.model.Video;
 import aiss.vimeominer.model.VideoListResponse;
 import aiss.vimeominer.service.CaptionService;
@@ -86,7 +87,8 @@ public class VideoController {
             for (Video video : videos) {
                 String id = video.getUri().substring(video.getUri().lastIndexOf("/") + 1);
                 List<Comment> comments = commentService.getVideoComments(id);
-                video.setComments(comments);
+                List<CommentParser> newComments = CommentParser.parseComments(comments);
+                video.setComments(newComments);
                 video.setCaption(captionService.getVideoCaption(id));
             }
 

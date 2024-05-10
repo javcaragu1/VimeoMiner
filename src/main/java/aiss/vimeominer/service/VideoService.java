@@ -2,6 +2,7 @@ package aiss.vimeominer.service;
 
 import aiss.vimeominer.model.Caption;
 import aiss.vimeominer.model.Comment.Comment;
+import aiss.vimeominer.model.Comment.CommentParser;
 import aiss.vimeominer.model.Video;
 import aiss.vimeominer.model.VideoListResponse;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -62,10 +63,11 @@ public class VideoService {
             for (Integer i = 0; i < videos.size(); i++) {
                 String videoId = videos.get(i).getUri().substring(videos.get(i).getUri().lastIndexOf("/") + 1);
                 List<Comment> comments = commentService.getVideoComments(videoId);
-                videos.get(i).setComments(comments);
+                List<CommentParser> newComments = CommentParser.parseComments(comments);
+                videos.get(i).setComments(newComments);
                 List<Caption> caption = captionService.getVideoCaption(videoId);
                 videos.get(i).setCaption(caption);
-                Video videoEdited = new Video(videoId, videos.get(i).getName(), videos.get(i).getDescription(), videos.get(i).getReleaseTime(), comments, caption);
+                Video videoEdited = new Video(videoId, videos.get(i).getName(), videos.get(i).getDescription(), videos.get(i).getReleaseTime(), newComments, caption);
                 videosEdited.add(videoEdited);
             }
 

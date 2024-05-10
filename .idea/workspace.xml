@@ -4,18 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="Creo que lo tengo!!!!!">
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/ChannelParser.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/controller/ChannelController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/model/Channel/Channel.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/aiss/vimeominer/service/ChannelService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/ChannelServiceTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/aiss/VimeoMiner/service/ChannelServiceTest.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/controller/ChannelController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/model/Channel.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/aiss/vimeominer/service/ChannelService.class" afterDir="false" />
-    </list>
+    <list default="true" id="7648bba5-05db-4209-a46a-7fe43ea67eac" name="Changes" comment="Comments parseado" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -53,9 +42,9 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
-    "git-widget-placeholder": "master",
     "kotlin-language-version-configured": "true",
-    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/YoutubeMiner-main"
+    "last_opened_file_path": "C:/Users/javic/Desktop/Uni/AISS/Proyecto/YoutubeMiner-main",
+    "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
   <component name="RunManager" selected="Application.VimeoMinerApplication">

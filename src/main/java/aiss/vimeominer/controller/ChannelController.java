@@ -3,6 +3,7 @@ package aiss.vimeominer.controller;
 import aiss.vimeominer.model.Channel.Channel;
 import aiss.vimeominer.model.ChannelParser;
 import aiss.vimeominer.model.Comment.Comment;
+import aiss.vimeominer.model.Comment.CommentParser;
 import aiss.vimeominer.model.Video;
 import aiss.vimeominer.service.ChannelService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,6 +13,7 @@ import org.springframework.http.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.client.RestTemplate;
 
+import java.util.ArrayList;
 import java.util.List;
 
 @RestController
@@ -73,7 +75,7 @@ public class ChannelController {
 
         // Filter comments for each video
         for (Video video : channel.getVideos()) {
-            List<Comment> comments = video.getComments();
+            List<CommentParser> comments = video.getComments();
             if (maxComments >= 0 && comments.size() > maxComments) {
                 video.setComments(comments.subList(0, maxComments));
             }
@@ -105,7 +107,7 @@ public class ChannelController {
 
         // Filter comments for each video
         for (Video video : channel.getVideos()) {
-            List<Comment> comments = video.getComments();
+            List<CommentParser> comments = video.getComments();
             if (maxComments >= 0 && comments.size() > maxComments) {
                 video.setComments(comments.subList(0, maxComments));
             }
